@@ -1,0 +1,151 @@
+<!doctype html>
+
+<style> 
+	
+	h1
+	{
+		text-align: center;
+		margin-bottom: -5px;
+	}
+	
+	input 
+	{
+		display: flex;
+		flex-direction: row;
+	}
+	
+	p 
+	{
+		text-align: center;
+		padding: 2%;
+	}
+	
+	body 
+	{
+		text-align: center;
+		margin: auto;
+		background-color: #D3CDD7;
+	}
+	
+	#pxl 
+	{
+		width: 100px;
+		height: 100px;
+		align
+		
+	}
+	
+	#userInput 
+	{
+		margin: auto;
+		display: flex;
+		flex-direction: row;
+		width: 30vw;
+	}
+	
+	#button1 
+	{
+		margin-top: 10px;
+		width: 10vw;
+		text-align: center;
+	}
+
+	fieldset
+	{
+		background-color: #DDF2EB;
+		border-width: 1vw;
+	}
+	
+</style>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>namepolygon.html</title>
+</head>
+
+<body>
+	<h1>Pure Xerus Enterprise</h1>
+	<img src="images/purexerusllc.png" alt="Pure Xerus Enterprise" id="pxl">
+	<fieldset>
+		<h2>Pure Xerus is asking for your number of sides!</h2>
+		<input type="text" id="userInput" placeholder="Input number of sides between 0 to 10.">
+		<button id="button1" onClick="getShape()">Enter</button>
+		
+		<script>
+			/*
+			Checks information input into the input textbox to make sure that it 
+			1. Is a number with an absolute value between 0 and 10
+			*/
+			function validateEntry()
+			{
+				var textInput = document.getElementById("userInput").value;
+				if (isNaN(textInput) || textInput == "" || textInput == null) //checks for: not a number, not null, if it is, return true
+				{
+					return true;
+				}
+				else //checks if its a number within range
+				{
+					var numValue = parseInt(textInput);
+					numValue = Math.abs(numValue);
+					return (numValue > 10 || numValue < 0); //returns true if not in range, false if in range
+				}
+			}
+			
+			/* 
+				This function calls validateEntry() to validate the input text, then once validated to be a number, it runs a switch on the number after rounding it up 
+			*/
+			function getShape() 
+			{
+				
+				var output = "";
+				var sides = 0;
+				
+				if (validateEntry()) 
+				{
+					document.getElementById("display").innerHTML = "Please enter a proper number between 0 and 10.";
+				}
+				else
+				{
+					var decimalOne = parseFloat(document.getElementById("userInput").value);
+					sides = Math.abs(parseInt(Math.round(decimalOne)));
+					switch(sides) 
+					{
+						case 0: output = "With 0 sides, this shape is known as a 'Circle.'";
+							break;
+						case 1: output = "With 1 side, this shape is known as a 'Monogon.'";
+							break;
+						case 2: output = "With 2 sides, this shape is known as a 'Bigon.'";
+							break;
+						case 3: output = "With 3 sides, this shape is known as a 'Triangle.'";
+							break;
+						case 4: output = "With 4 sides, this shape is known as a 'Quadrilateral'";
+							break;
+						case 5: output = "With 5 sides, this shape is known as a 'Pentagon'";
+							break;
+						case 6: output = "With 6 sides, this shape is known as a 'Hexagon'";
+							break;
+						case 7: output = "With 7 sides, this shape is known as a 'Heptagon'";
+							break;
+						case 8: output = "With 8 sides, this shape is known as a 'Octagon'";
+							break;
+						case 9: output = "With 9 sides, this shape is known as a 'Nonagon'";
+							break;
+						case 10: output = "With 10 sides, this shape is known as a 'Decagon'";
+							break;
+						default: output = "Number not within range, please try again."
+					}
+					document.getElementById("display").innerHTML = output;
+				}		
+			}
+			
+			
+			
+		</script>
+		<p id="display"></p>
+	</fieldset>
+	
+
+	
+</body>
+</html>
