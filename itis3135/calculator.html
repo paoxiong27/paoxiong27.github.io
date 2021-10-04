@@ -1,0 +1,185 @@
+<!doctype html>
+
+<style>
+	
+	img
+	{
+		margin: auto;
+		width: 100px;
+		height: 100px;
+	}
+	
+	.calculatorKeys
+	{
+
+	}
+	
+	
+	
+</style>
+
+<html>
+<head>
+<meta charset="utf-8">
+<title>calculator.html</title>
+</head>
+
+<body>
+	<h1>Pure Xerus Enterprise</h1>
+	<img src="images/purexerusllc.png" alt="Pure Xerus Enterprise" id="pxl">
+	
+	<div class="calculator">
+		<div class="calculatorDisplay"></div>
+		<div class="calculatorKeys">
+			<button class="key--operator" data-action="add">+</button>
+			<button class="key--operator" data-action="subtract">-</button>
+			<button class="key--operator" data-action="multiply">*</button>
+			<button class="key--operator" data-action="divide">/</button>
+			<button>7</button>
+			<button>8</button>
+			<button>9</button>
+			<button>4</button>
+			<button>5</button>
+			<button>6</button>
+			<button>1</button>
+			<button>2</button>
+			<button>3</button>
+			<button>0</button>
+			<button data-action="decimal">.</button>
+			<button data-action="clear">AC</button>
+			<button class="key--equal" data-action="calculate">=</button>
+			<script>
+				const calculator = document.querySelector('.calculator');
+				const keys = calculator.querySelector('.calculatorKeys')
+				
+				keys.addEventListener('click', e =>
+				{
+					if (e.target.matches('button'))
+						{
+							const key = e.target;
+							const action = key.dataset.action;
+				
+							if (!action)
+								{
+									console.log("number key!")
+								}
+							if 
+							(
+							action === 'add' ||
+							action === 'subtract' ||
+							action === 'multiply' ||
+							action === 'divide'
+							)
+							{
+							console.log('operator key!')
+							}
+							
+							if (action === "decimal")
+								{
+									console.log("decimal key!")
+								}
+							if (action === "clear")
+								{
+									console.log("clear key!")
+								}
+							if (action === "calculate")
+								{
+									console.log("calculate key!")
+								}
+						}
+				})
+				
+				const display = document.querySelector('.calculatorDisplay');
+				
+				keys.addEventListener('click', e =>
+				{
+					if (e.target.matches('button')) 
+					{
+						const key = e.target;
+						const action = key.dataset;
+						const keyContent = key.textContent;
+						const displayedNum = display.textContent;
+						
+						if (!action)
+						{
+							if (displayedNum === '0')
+								{
+									display.textContent = keyContent;
+								}
+
+						}
+						else
+						{
+							display.textContent = displayedNum + keyContent;
+						}
+						
+						if (action === 'decimal')
+							{
+								display.textContent = displayedNum + '.'
+							}
+						if 
+							(
+							action === 'add' ||
+							action === 'subtract' ||
+							action === 'multiply' ||
+							action === 'divide'
+							)
+							{
+								key.classList.add("is-depressed");
+							}
+					}
+				})
+				
+				keys.addEventListener('click', e =>
+				{
+					if (e.target.matches('button'))
+					{
+						const key = e.target;
+						
+						Array.from(key.parentNode.children).forEach(k => k.classList.remove('is-depressed'))
+					}
+				})
+				
+				keys.addEventListener('click', e => 
+			 	{
+  				if (e.target.matches('button')) 
+					{
+
+						if (
+						  action === 'add' ||
+						  action === 'subtract' ||
+						  action === 'multiply' ||
+						  action === 'divide'
+						) 
+						{
+						  key.classList.add('is-depressed')
+						  calculator.dataset.previousKeyType = 'operator'
+						}
+					
+						const previousKeyType = calculator.dataset.previousKeyType
+
+						if (!action) 
+						{
+							if (displayedNum === '0' || previousKeyType === 'operator') 
+							  {
+								  display.textContent = keyContent
+							  }
+							else
+							{
+								display.textContent = displayedNum + keyContent
+							}
+						}
+					
+					}
+				})
+				
+
+				
+				
+				
+			</script>
+		</div>
+	</div>
+	
+</body>
+</html>
