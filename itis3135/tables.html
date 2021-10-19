@@ -1,269 +1,221 @@
 <!doctype html>
-<style>
-	.center{
-		text-align: center;
-	}
-	.mainPicture {
-		display: block;
-		margin-left: auto;
-		margin-right: auto;
-		width: 80%;
-		border-bottom: 0px;
-	}
-	.sbbg {
-		background-color: skyblue;
-	}
-	body {
-		color: #191970;
-		font-size: 16px;
-		font-family: monospace;
-	}
-	.listHeader {
-		font-size: 20px;
-	}
-	
-	table
-	{
-		border-collapse: collapse;
-
-		margin-left: auto;
-		margin-right: auto;
-	}
-
-	thead
-	{
-		background-color: mediumpurple;
-	}
-
-	th, td
-	{
-		border: 1px solid black;
-		padding: .2em 1em .2em .5em;
-		text-align: left;
-		vertical-align: middle;
-	}
-
-	.right
-	{
-		text-align: right;
-	}
-
-	tbody tr:nth-child(odd) td
-	{
-		background-color: lavender;
-	}
-	
-	tbody tr:nth-child(even) td
-	{
-		background-color: whitesmoke;
-	}
-	
-	
-</style>
-<html>
+<html lang="en">
 <head>
 <meta charset="utf-8">
-<title>index.html</title>
+<link rel="stylesheet" href="styles/default.css">
+<title>Tables</title>
 </head>
 
 <body class="sbbg">
 	
-	<div id="navigation-panel">
+	<header>
 		<h1 class="center">Pao Xiong -- ITIS 3135</h1>
-		<h2 class="center"><a href="introduction.html">Introduction</a> | <a href="tables.html">Tables</a> |&nbsp; </h2>
-	</div>
+		<h2 class="center"><a href="introduction.html">Introduction</a> | <a href="tables.html"> HTML Tables</a> </h2>
+	</header>
 	
-	<h3 class="center">My Tabular Data</h3>
+	<main>
+		<h2>HTML Tables</h2>
+		<h3 class="center">My Tabular Data</h3>
+
+		<ol>
+			<li>Kongkham, Jason jkong02@webpagepros.com 12</li>
+			<li>Xanaxay, Billy bxana01@webkings.com 19</li>
+			<li>Nie, Naomi nnie03@gmail.com 5</li>
+			<li>Ksor, Jenna jennaksor@protonmail.com 34</li>
+			<li>Mills, Tyrese tymills1995@gmail.com 5</li>
+			<li>Jackson, Vale jacksonvale7@gmail.com 25</li>
+			<li>Johnson, Kagax kag.johnson1985@gmail.com 22</li>
+			<li>Shiroe, Poro pshiroe@webpagepros.com 19</li>
+			<li>Chen, David chen.david@webproduction.com 14</li>
+			<li>Mahogany, Jojo mahojojo@gmail.com 13</li>
+		</ol>
+
+		<h3 class="center">Employee Data in Simple Table</h3>
+
+		<table>
+			<thead>
+				<tr>
+					<th scope="col">Last Name</th>
+					<th scope="col">First Name</th>
+					<th scope="col">Email</th>
+					<th scope="col">Years of Service</th>
+				</tr>
+			</thead>
+			<tr>
+				<td>Kongkham</td>
+				<td>Jason</td>
+				<td>jkong02@webpagepros.com</td>
+				<td>12</td>
+			</tr>
+			<tr>
+				<td>Xanaxay</td>
+				<td>Billy</td>
+				<td>bxana01@webkings.com</td>
+				<td>19</td>
+			</tr>
+			<tr>
+				<td>Nie</td>
+				<td>Naomi</td>
+				<td>nnie03@gmail.com</td>
+				<td>5</td>
+			</tr>
+			<tr>
+				<td>Ksor</td>
+				<td>Jenna</td>
+				<td>jennaksor@protonmail.com</td>
+				<td>34</td>
+			</tr>
+			<tr>
+				<td>Mills</td>
+				<td>Tyrese</td>
+				<td>tymills1995@gmail.com</td>
+				<td>5</td>
+			</tr>
+			<tr>
+				<td>Jackson</td>
+				<td>Vale</td>
+				<td>jacksonvale7@gmail.com</td>
+				<td>25</td>
+			</tr>
+			<tr>
+				<td>Johnson</td>
+				<td>Kagax</td>
+				<td>kag.johnson1985@gmail.com</td>
+				<td>22</td>
+			</tr>
+			<tr>
+				<td>Shiroe</td>
+				<td>Poro</td>
+				<td>pshiroe@webpagepros.com</td>
+				<td>19</td>
+			</tr>
+			<tr>
+				<td>Chen</td>
+				<td>David</td>
+				<td>chen.david@webproduction.com</td>
+				<td>14</td>
+			</tr>
+			<tr>
+				<td>Mahogany</td>
+				<td>Jojo</td>
+				<td>mahojojo@gmail.com</td>
+				<td>13</td>
+			</tr>
+		</table>
+
+		<h3 class="center">Employee Data in Complex Table</h3>
+		<figure>
+			<table>
+			<thead>
+				<tr>
+					<th scope="col">Department</th>
+					<th scope="col">Last Name</th>
+					<th scope="col">First Name</th>
+					<th scope="col">Email</th>
+					<th scope="col">Years of Service</th>
+					<th scope="col">Salary (USD)</th>
+				</tr>
+			</thead>
+			<tr>
+				<td rowspan="3">Marketing</td>
+				<td>Kongkham</td>
+				<td>Jason</td>
+				<td>jkong02@webpagepros.com</td>
+				<td>12</td>
+				<td>120,000</td>
+			</tr>
+			<tr>
+				<td>Xanaxay</td>
+				<td>Billy</td>
+				<td>bxana01@webkings.com</td>
+				<td>19</td>
+				<td>190,000</td>
+			</tr>
+			<tr>
+				<td>Nie</td>
+				<td>Naomi</td>
+				<td>nnie03@gmail.com</td>
+				<td>5</td>
+				<td>50,000</td>
+			</tr>
+			<tr>
+				<td rowspan="4">Sales</td>
+				<td>Ksor</td>
+				<td>Jenna</td>
+				<td>jennaksor@protonmail.com</td>
+				<td>34</td>
+				<td>340,000</td>
+			</tr>
+			<tr>
+				<td>Mills</td>
+				<td>Tyrese</td>
+				<td>tymills1995@gmail.com</td>
+				<td>5</td>
+				<td>50,000</td>
+			</tr>
+			<tr>
+				<td>Jackson</td>
+				<td>Vale</td>
+				<td>jacksonvale7@gmail.com</td>
+				<td>25</td>
+				<td>250,000</td>
+			</tr>
+			<tr>
+				<td>Johnson</td>
+				<td>Kagax</td>
+				<td>kag.johnson1985@gmail.com</td>
+				<td>22</td>
+				<td>220,000</td>
+			</tr>
+			<tr>
+				<td rowspan="3">Finance</td>
+				<td>Shiroe</td>
+				<td>Poro</td>
+				<td>pshiroe@webpagepros.com</td>
+				<td>19</td>
+				<td>190,000</td>
+			</tr>
+			<tr>
+				<td>Chen</td>
+				<td>David</td>
+				<td>chen.david@webproduction.com</td>
+				<td>14</td>
+				<td>140,000</td>
+			</tr>
+			<tr>
+				<td>Mahogany</td>
+				<td>Jojo</td>
+				<td>mahojojo@gmail.com</td>
+				<td>13</td>
+				<td>130,000</td>
+			</tr>
+			<tfoot>
+				<tr>
+					<th colspan="4">Total Years of Service:</th>
+					<th>168</th>
+					<th>1,680,000</th>
+				</tr>
+			</tfoot>
+		</table>
+		<figcaption>Employee data in complex table showing department alongside total salaries and years of experiences.</figcaption>
+		</figure>
+		</main>
 	
-	<ol>
-		<li>Kongkham, Jason jkong02@webpagepros.com 12</li>
-		<li>Xanaxay, Billy bxana01@webkings.com 19</li>
-		<li>Nie, Naomi nnie03@gmail.com 5</li>
-		<li>Ksor, Jenna jennaksor@protonmail.com 34</li>
-		<li>Mills, Tyrese tymills1995@gmail.com 5</li>
-		<li>Jackson, Vale jacksonvale7@gmail.com 25</li>
-		<li>Johnson, Kagax kag.johnson1985@gmail.com 22</li>
-		<li>Shiroe, Poro pshiroe@webpagepros.com 19</li>
-		<li>Chen, David chen.david@webproduction.com 14</li>
-		<li>Mahogany, Jojo mahojojo@gmail.com 13</li>
-	</ol>
-	
-	<h3 class="center">Employee Data in Simple Table</h3>
-	
-	<table>
-		<thead>
-			<th>Last Name</th>
-			<th>First Name</th>
-			<th>Email</th>
-			<th>Years of Service</th>
-		</thead>
-		<tr>
-			<td>Kongkham</td>
-			<td>Jason</td>
-			<td>jkong02@webpagepros.com</td>
-			<td>12</td>
-		</tr>
-		<tr>
-			<td>Xanaxay</td>
-			<td>Billy</td>
-			<td>bxana01@webkings.com</td>
-			<td>19</td>
-		</tr>
-		<tr>
-			<td>Nie</td>
-			<td>Naomi</td>
-			<td>nnie03@gmail.com</td>
-			<td>5</td>
-		</tr>
-		<tr>
-			<td>Ksor</td>
-			<td>Jenna</td>
-			<td>jennaksor@protonmail.com</td>
-			<td>34</td>
-		</tr>
-		<tr>
-			<td>Mills</td>
-			<td>Tyrese</td>
-			<td>tymills1995@gmail.com</td>
-			<td>5</td>
-		</tr>
-		<tr>
-			<td>Jackson</td>
-			<td>Vale</td>
-			<td>jacksonvale7@gmail.com</td>
-			<td>25</td>
-		</tr>
-		<tr>
-			<td>Johnson</td>
-			<td>Kagax</td>
-			<td>kag.johnson1985@gmail.com</td>
-			<td>22</td>
-		</tr>
-		<tr>
-			<td>Shiroe</td>
-			<td>Poro</td>
-			<td>pshiroe@webpagepros.com</td>
-			<td>19</td>
-		</tr>
-		<tr>
-			<td>Chen</td>
-			<td>David</td>
-			<td>chen.david@webproduction.com</td>
-			<td>14</td>
-		</tr>
-		<tr>
-			<td>Mahogany</td>
-			<td>Jojo</td>
-			<td>mahojojo@gmail.com</td>
-			<td>13</td>
-		</tr>
-	</table>
-	
-	<h3 class="center">Employee Data in Simple Table</h3>
-	
-	<table>
-		<thead>
-			<th>Department</th>
-			<th>Last Name</th>
-			<th>First Name</th>
-			<th>Email</th>
-			<th>Years of Service</th>
-			<th>Salary (USD)</th>
-		</thead>
-		<tr>
-			<td rowspan="3">Marketing</td>
-			<td>Kongkham</td>
-			<td>Jason</td>
-			<td>jkong02@webpagepros.com</td>
-			<td>12</td>
-			<td>120,000</td>
-		</tr>
-		<tr>
-			<td>Xanaxay</td>
-			<td>Billy</td>
-			<td>bxana01@webkings.com</td>
-			<td>19</td>
-			<td>190,000</td>
-		</tr>
-		<tr>
-			<td>Nie</td>
-			<td>Naomi</td>
-			<td>nnie03@gmail.com</td>
-			<td>5</td>
-			<td>50,000</td>
-		</tr>
-		<tr>
-			<td rowspan="4">Sales</td>
-			<td>Ksor</td>
-			<td>Jenna</td>
-			<td>jennaksor@protonmail.com</td>
-			<td>34</td>
-			<td>340,000</td>
-		</tr>
-		<tr>
-			<td>Mills</td>
-			<td>Tyrese</td>
-			<td>tymills1995@gmail.com</td>
-			<td>5</td>
-			<td>50,000</td>
-		</tr>
-		<tr>
-			<td>Jackson</td>
-			<td>Vale</td>
-			<td>jacksonvale7@gmail.com</td>
-			<td>25</td>
-			<td>250,000</td>
-		</tr>
-		<tr>
-			<td>Johnson</td>
-			<td>Kagax</td>
-			<td>kag.johnson1985@gmail.com</td>
-			<td>22</td>
-			<td>220,000</td>
-		</tr>
-		<tr>
-			<td rowspan="3">Finance</td>
-			<td>Shiroe</td>
-			<td>Poro</td>
-			<td>pshiroe@webpagepros.com</td>
-			<td>19</td>
-			<td>190,000</td>
-		</tr>
-		<tr>
-			<td>Chen</td>
-			<td>David</td>
-			<td>chen.david@webproduction.com</td>
-			<td>14</td>
-			<td>140,000</td>
-		</tr>
-		<tr>
-			<td>Mahogany</td>
-			<td>Jojo</td>
-			<td>mahojojo@gmail.com</td>
-			<td>13</td>
-			<td>130,000</td>
-		</tr>
-		<thead>
-			<th colspan="4">Total Years of Service:</th>
-			<th>168</th>
-			<th>1,680,000</th>
-		</thead>
-	</table>
-	
-<div id="footer">
+	<footer>
 		<h2 class="center"><a href="https://github.com/paoxiong27">Github</a> | <a href="https://paoxiong27.github.io/">Github.io</a> | <a href="https://www.freecodecamp.org/paoxiong">freeCodeCamp</a></h2>
-  <h3 class="center"><br>
-  Page built by WebpagePros</h3>
-	<p style="text-align: center">
-    <a href="https://jigsaw.w3.org/css-validator/check/referer">
-        <img style="border:0;width:88px;height:31px"
-            src="https://jigsaw.w3.org/css-validator/images/vcss"
-            alt="Valid CSS!" />
-    </a>
-	<img style="border:0;width:88px;height:31px" src="images/validhtml.gif" alt="Valid HTML!">
-</p>
-     
-</div>
+		<h3 class="center"><br>Page built by WebpagePros</h3>
+		<p style="text-align: center">
+			<a href="https://jigsaw.w3.org/css-validator/check/referer">
+			<img style="border:0;width:88px;height:31px"
+				src="https://jigsaw.w3.org/css-validator/images/vcss"
+				alt="Valid CSS!" />
+			</a>
+			<a href="https://validator.w3.org/nu/?doc=https%3A%2F%2Fwebpages.uncc.edu%2Fpxiong22%2Fitis3135%2Ftables.html">
+			<img style="border:0;width:88px;height:31px" src="images/validhtml.gif" alt="Valid HTML!">
+			</a>
+		</p>
+
+	</footer>
 	
 	
 </body>
